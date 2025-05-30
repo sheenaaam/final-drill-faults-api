@@ -1,0 +1,84 @@
+{
+  "info": {
+    "name": "Faults API",
+    "_postman_id": "d8fd8d2d-fault-api-collection",
+    "description": "CRUD operations for student faults in Flask app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Fault (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"student_id\": 1,\n  \"description\": \"Cheating in exam\",\n  \"date_reported\": \"2025-05-29\",\n  \"resolved\": false\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/faults/",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "faults"]
+        }
+      }
+    },
+    {
+      "name": "Get All Faults (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/faults/",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "faults"]
+        }
+      }
+    },
+    {
+      "name": "Update Fault (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"description\": \"Cheating in final exam\",\n  \"resolved\": true\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/faults/1",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "faults", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Fault (DELETE)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/faults/1",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "faults", "1"]
+        }
+      }
+    }
+  ]
+}
