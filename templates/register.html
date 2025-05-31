@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %} Add {{ x }} {% endblock %}
+{% block head %}  Add {{ x }} {% endblock %}
+	
+{% block body %}
+	
+		<form method="post" action=" {{ url_for('register') }} " >
+			<input type="text"     name="name"     placeholder=" {{x}} Name"  autocomplete="off" autofocus>
+			<input type="password" name="password" placeholder=" Password">
+			<input type="number"   name="age" 	   placeholder=" Age">
+			<input type="number"   name="phone"	   placeholder=" Phone">
+			<input type="email"    name="email"    placeholder=" Email">
+			<input type="submit"  value=" Register ">
+		</form>
+		
+{% endblock %}
+<!--
+	<div class="container">
+		<div class="row" style="margin-top: 40px">
+			<div class="col-sm-6">
+				
+				<form method="POST">
+				
+					<div class="form-group">
+						<label for="email"> Username </label>
+						<input type="text" name="uname" class="form-control" id="uname">
+					</div>
+				
+					<div class="form-group">
+						<label for="email"> Email </label>
+						<input type="email" name="mail" class="form-control" id="mail">
+					</div>
+				
+					<div class="form-group">
+						<label for="email"> Password </label>
+						<input type="password" name="passw" class="form-control" id="passw">
+					</div>
+
+					<div class="form-group">
+						<label for="email"> Phone Number</label>
+						<input type="password" name="passw" class="form-control" id="passw">
+					</div>
+					
+					<div class="form-group">
+						<label for="email"> Age </label>
+						<input type="password" name="passw" class="form-control" id="passw">
+					</div>
+							
+					<button type="submit" class="btn form-control btn-default">Register</button>
+				
+				</form>
+	
+			</div>
+
+		</div>
+	</div>
+-->
